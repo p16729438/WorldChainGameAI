@@ -31,7 +31,7 @@ public class Main
 	
 	static ArrayList<String> oneShotWord = new ArrayList<String>(); //한방단어 목록
 	
-	static String nowWord = "";
+	static String nowWord = ""; //방금 턴의 마지막 글자
 	
 	static boolean turn = false; //false = AI, true = 당신
 	
@@ -50,7 +50,7 @@ public class Main
 		startGame();
 	}
 	
-	public static void startGame()
+	public static void startGame() //게임 시작
 	{
 		for(int i = 0; i < 30; i++)
 		{
@@ -76,7 +76,7 @@ public class Main
 		yourTurn();
 	}
 	
-	public static int[] simulate(String simulateWord, HashMap<String, Integer> simulateWordMap, ArrayList<String> simulateUsedWord, boolean isMyTurn)
+	public static int[] simulate(String simulateWord, HashMap<String, Integer> simulateWordMap, ArrayList<String> simulateUsedWord, boolean isMyTurn) //시뮬레이션
 	{
 		int[] simulateResult = new int[2];
 		simulateResult[0] = 0;
@@ -119,7 +119,7 @@ public class Main
 		return simulateResult;
 	}
 	
-	public static void myTurn()
+	public static void myTurn() //인공지능의 차례
 	{
 		ArrayList<Thread> threads = new ArrayList<Thread>();
 		for(String words : wordMap.keySet())
@@ -183,7 +183,7 @@ public class Main
 		yourTurn();
 	}
 	
-	public static void yourTurn()
+	public static void yourTurn() //유저의 차례
 	{
 		if(hasCanUseWord())
 		{
