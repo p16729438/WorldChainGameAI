@@ -21,7 +21,7 @@ import org.xml.sax.SAXException;
 
 public class Main
 {
-	static final String key = "30886622532F8E0B8BC0704B2F1D8BBD";
+	static final String key = YOUR_KEY; //국립국어원 API Key
 	static int lastCode = 535000; //개발 일자 기준 533600번째쯤에 마지막 번호
 	static int threadI = 0;
 	static final int threadCount = 128; //128스레드 기준 크롤링하는데 걸리는 시간 약 30분
