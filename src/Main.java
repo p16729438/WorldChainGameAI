@@ -165,7 +165,6 @@ public class Main
 			System.out.println("당신의 승리입니다.");
 			return;
 		}
-		System.out.println(threads.get(0).isAlive());
 		word = randomWord(word);
 		System.out.println("AI : "+word+"   ("+getDefinition(word)+")   (승리 "+rate+"% 확신)");
 		usedWord.add(word);
