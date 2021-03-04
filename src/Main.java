@@ -237,7 +237,8 @@ public class Main
 		}
 		else
 		{
-			System.out.println("더이상 사용할 수 없는 단어입니다.");
+			System.out.println("더이상 사용할 수 없는 단어가 없습니다.");
+			System.out.println("당신의 패배입니다.");
 			return;
 		}
 	}
