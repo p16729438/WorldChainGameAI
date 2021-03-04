@@ -250,7 +250,13 @@ public class Main
 		{
 			if(words.startsWith(nowWord))
 			{
-				return true;
+				if(! usedWord.contains(words))
+				{
+					if(! oneShotWord.contains(getStartEndChar(word)))
+					{
+						return true;
+					}
+				}
 			}
 		}
 		return false;
