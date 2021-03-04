@@ -195,7 +195,7 @@ public class Main
 			{
 				if(! usedWord.contains(word))
 				{
-					if(wordMap.containsKey(getStartEndChar(word)))
+					if(isWord(word))
 					{
 						if(! oneShotWord.contains(getStartEndChar(word)))
 						{
@@ -272,6 +272,19 @@ public class Main
 		}
 		Random r = new Random();
 		return words.get(r.nextInt(words.size()));
+	}
+	
+	public static boolean isWord(String word)
+	{
+		File dataFolder = new File("WCGAIdata");
+		for(File wordFile : dataFolder.listFiles())
+		{
+			if(wordFile.getName().split("\\.")[0].equalsIgnoreCase(word))
+			{
+				return true;
+			}
+		}
+		return false;
 	}
 	
 	public static String startWord()
