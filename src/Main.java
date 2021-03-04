@@ -252,7 +252,7 @@ public class Main
 			{
 				if(! usedWord.contains(words))
 				{
-					if(! oneShotWord.contains(getStartEndChar(word)))
+					if(! oneShotWord.contains(getStartEndChar(words)))
 					{
 						return true;
 					}
