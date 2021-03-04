@@ -195,9 +195,9 @@ public class Main
 			{
 				if(! usedWord.contains(word))
 				{
-					if(! oneShotWord.contains(getStartEndChar(word)))
+					if(wordMap.containsKey(getStartEndChar(word)))
 					{
-						if(wordMap.containsKey(getStartEndChar(word)))
+						if(! oneShotWord.contains(getStartEndChar(word)))
 						{
 							usedWord.add(word);
 							if(wordMap.get(getStartEndChar(word)) == 1)
@@ -213,13 +213,13 @@ public class Main
 						}
 						else
 						{
-							System.out.println("없는 단어입니다.");
+							System.out.println("한방단어는 사용할 수 없습니다.");
 							yourTurn();
 						}
 					}
 					else
 					{
-						System.out.println("한방단어는 사용할 수 없습니다.");
+						System.out.println("없는 단어입니다.");
 						yourTurn();
 					}
 				}
