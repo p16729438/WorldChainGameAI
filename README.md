@@ -1,4 +1,4 @@
-# WorldChainGameAI
+# WordChainGameAI
 
 한글 끝말잇기 인공지능
 
